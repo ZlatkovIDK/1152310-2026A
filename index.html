@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- Estudiante: 1152310-2026A | Producto: SyncDoc | Examen Diagnóstico 2026A -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyncDoc</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body data-student="1152310-2026A">
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <nav class="nav">
+    <h2 class="nav-logo">SyncDoc</h2>
+
+    <ul class="nav-menu">
+      <li><a href="#section-hero">Inicio</a></li>
+      <li><a href="#section-caracteristicas">Características</a></li>
+      <li><a href="#section-como-funciona">Cómo funciona</a></li>
+      <li><a href="#section-precios">Precios</a></li>
+      <li><a href="#section-testimonios">Testimonios</a></li>
+      <li><a href="#section-contacto">Contacto</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="section-hero" class="hero">
+  <div class="hero-container">
+    <h1 class="titulo-hero">SyncDoc</h1>
+
+    <p id="saludo" class="hero-saludo"></p>
+
+    <p class="hero-descripcion">
+      Plataforma para crear, compartir y co-editar documentos en tiempo real.
+    </p>
+
+    <button id="btn-precios" class="btn-principal">
+      Ver planes
+    </button>
+
+    <img src="img/syncdoc.png" alt="SyncDoc App" class="hero-img">
+  </div>
+</section>
+
+<!-- ================= CARACTERÍSTICAS ================= -->
+<section id="section-caracteristicas" class="caracteristicas">
+  <h2 class="titulo-seccion">Características</h2>
+
+  <div class="filtros">
+    <button data-filter="core">Core</button>
+    <button data-filter="integracion">Integración</button>
+    <button data-filter="seguridad">Seguridad</button>
+    <button data-filter="all">Todas</button>
+  </div>
+
+  <p id="contador"></p>
+
+  <div class="cards" id="cards">
+    <!-- JS inserta tarjetas -->
+  </div>
+</section>
+
+<!-- ================= CÓMO FUNCIONA ================= -->
+<section id="section-como-funciona" class="como-funciona">
+  <h2 class="titulo-seccion">Cómo funciona</h2>
+
+  <div class="pasos">
+
+    <div class="paso" data-step="1">
+      <h3>1. Crear documento</h3>
+      <p class="detalle">Crea documentos de forma rápida y sencilla.</p>
+    </div>
+
+    <div class="paso" data-step="2">
+      <h3>2. Compartir</h3>
+      <p class="detalle">Invita a tu equipo con un solo clic.</p>
+    </div>
+
+    <div class="paso" data-step="3">
+      <h3>3. Editar</h3>
+      <p class="detalle">Editan simultáneamente en tiempo real.</p>
+    </div>
+
+    <div class="paso" data-step="4">
+      <h3>4. Sincronizar</h3>
+      <p class="detalle">Los cambios se guardan automáticamente.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PRECIOS ================= -->
+<section id="section-precios" class="precios">
+  <h2 class="titulo-seccion">Planes</h2>
+
+  <label class="toggle">
+    Mensual
+    <input type="checkbox" id="toggle-precio">
+    Anual
+  </label>
+
+  <div class="planes">
+
+    <div class="plan">
+      <h3>Gratis</h3>
+      <p id="precio1">$0</p>
+      <ul>
+        <li>Acceso básico</li>
+        <li>1 usuario</li>
+        <li>Almacenamiento limitado</li>
+        <li>Soporte básico</li>
+        <li>Edición básica</li>
+      </ul>
+      <button class="btn-plan">Elegir</button>
+    </div>
+
+    <div class="plan recomendado">
+      <h3>Pro</h3>
+      <p id="precio2">$100.000</p>
+      <ul>
+        <li>Usuarios ilimitados</li>
+        <li>Colaboración en tiempo real</li>
+        <li>Historial de versiones</li>
+        <li>Integraciones</li>
+        <li>Soporte prioritario</li>
+      </ul>
+      <button class="btn-plan">Elegir</button>
+    </div>
+
+    <div class="plan">
+      <h3>Empresarial</h3>
+      <p id="precio3">$150.000</p>
+      <ul>
+        <li>Seguridad avanzada</li>
+        <li>Auditoría</li>
+        <li>Soporte dedicado</li>
+        <li>Escalabilidad</li>
+        <li>API completa</li>
+      </ul>
+      <button class="btn-plan">Elegir</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section id="section-testimonios" class="testimonios">
+  <h2 class="titulo-seccion">Testimonios</h2>
+
+  <div class="carrusel">
+    <p id="testimonio"></p>
+
+    <div class="controles">
+      <button id="btn-prev">Anterior</button>
+      <button id="btn-next">Siguiente</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="section-contacto" class="contacto">
+  <h2 class="titulo-seccion">Contacto</h2>
+
+  <form id="form" novalidate>
+    <input type="text" id="nombre" placeholder="Nombre completo">
+    <span class="error" id="error-nombre"></span>
+
+    <input type="email" id="correo" placeholder="Correo electrónico">
+    <span class="error" id="error-correo"></span>
+
+    <input type="text" id="asunto" placeholder="Asunto">
+    <span class="error" id="error-asunto"></span>
+
+    <textarea id="mensaje" placeholder="Mensaje"></textarea>
+    <span class="error" id="error-mensaje"></span>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p id="footer-text"></p>
+
+  <div class="footer-links">
+    <a href="#section-hero">Inicio</a>
+    <a href="#section-caracteristicas">Características</a>
+    <a href="#section-precios">Precios</a>
+  </div>
+
+  <div class="redes">
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">LinkedIn</a>
+  </div>
+
+  <button id="btn-top">Volver arriba</button>
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
